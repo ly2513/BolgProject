@@ -1,0 +1,171 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>李勇个人博客</title>
+<meta name="keywords" content="个人网站" />
+<meta name="description" content="这是一个有关黑色时间轴的css3 html5 网站" />
+<link href="{ly:$smarty.const._VIEW_}css/styles.css" rel="stylesheet">
+<link href="{ly:$smarty.const._VIEW_}css/view.css" rel="stylesheet">
+<!-- 返回顶部调用 begin -->
+<link href="{ly:$smarty.const._VIEW_}css/lrtk.css" rel="stylesheet" />
+<script type="{ly:$smarty.const._VIEW_}text/javascript" src="js/jquery.js"></script>
+<script type="{ly:$smarty.const._VIEW_}text/javascript" src="js/js.js"></script>
+<!-- 返回顶部调用 end-->
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+{ly:include file="header.html"}
+<!--header end-->
+<div id="mainbody">
+  <div class="blogs">
+    <div id="index_view">
+      <h2 class="t_nav"><a href="?m=Index&c=Index&a=index">网站首页</a><a href="?cid={ly:$field.cid}">{ly:$field.catname}</a></h2>
+      <h1 class="c_titile">{ly:$field.title}</h1>
+      <p class="box">发布时间：{ly:$field.addtime|date_format:'%Y-%m-%d'}<span>编辑：{ly:$field.username}</span>阅读（<script  src='?m=Index&c=Index&a=getClick&bid={ly:$field.bid}'></script>）</p>
+      <ul>
+       <p>{ly:$field.content}</p>
+      </ul>
+      <div class="share"> 
+        <!-- Baidu Button BEGIN -->
+        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"> <span class="bds_more">分享到：</span> <a class="bds_qzone"></a> <a class="bds_tsina"></a> <a class="bds_tqq"></a> <a class="bds_renren"></a> <a class="bds_t163"></a> <a class="shareCount"></a> </div>
+        <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6574585" ></script> 
+        <script type="text/javascript" id="bdshell_js"></script> 
+        <script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script> 
+        <!-- Baidu Button END --> 
+      </div>
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+          {ly:section loop=$related name=d}
+          <li><a href="?m=Index&c=Index&a=blog&bid={ly:$related[d].bid}&cid={ly:$related[d].cid}" title="{ly:$related[d].title}">
+            {ly:$related[d].title}
+          </a></li>
+         {ly:/section}
+        </ul>
+      </div>
+    </div>
+    <!--bloglist end-->
+    <aside>
+      <div class="search">
+        <form class="searchform" method="get" action="#">
+          <input type="text" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'">
+        </form>
+      </div>
+      <div class="sunnav">
+        <ul>
+          {ly:section loop=$categoryfour name=d}
+          <li><a href="?m=index&c=index&a=index&cid={ly:$categoryfour[d].cid}" target="_blank" title="{ly:$categoryfour[d].catname}">{ly:$categoryfour[d].catname}</a></li>
+          {ly:/section}
+        
+        </ul>
+      </div>
+      <div class="tuijian">
+        <h2>栏目更新</h2>
+        <ol>
+          {ly:section loop=$NewBlog name=d}
+          <li><span><strong>{ly:$smarty.section.d.index+1}</strong></span><a href="?a=blog&bid={ly:$NewBlog[d].bid}&cid={ly:$NewBlog[d].cid}" title="{ly:$NewBlog[d].title}">{ly:$NewBlog[d].title}</a></li>
+          {ly:/section}
+        </ol>
+      </div>
+      <div class="toppic">
+        <h2>图文并茂</h2>
+        <ul>
+          <li><a href="/"><img src="{ly:$smarty.const._VIEW_}images/k01.jpg">腐女不可怕，就怕腐女会画画！
+            <p>伤不起</p>
+            </a></li>
+          <li><a href="/"><img src="{ly:$smarty.const._VIEW_}images/k02.jpg">问前任，你还爱我吗？无限戳中泪点~
+            <p>感兴趣</p>
+            </a></li>
+          <li><a href="/"><img src="{ly:$smarty.const._VIEW_}images/k03.jpg">世上所谓幸福，就是一个笨蛋遇到一个傻瓜。
+            <p>喜欢</p>
+            </a></li>
+        </ul>
+      </div>
+      <div class="clicks">
+        <h2>热门点击</h2>
+        <ol>
+            {ly:section loop=$hotfield name=d}
+          <li>
+            <span>
+              <a href="?m=index&c=index&a=blog&bid={ly:$hotfield[d].bid}&cid={ly:$hotfield[d].cid}">{ly:$hotfield[d].catname}</a>
+            </span><a href="?a=blog&bid={ly:$hotfield[d].bid}&cid={ly:$hotfield[d].cid}" title="{ly:$hotfield[d].title}">{ly:$hotfield[d].title}</a>
+          </li>
+        {ly:/section}
+        </ol>
+      </div>
+    </aside>
+  </div>
+  <!--blogs end--> 
+</div>
+<!--mainbody end-->
+<footer>
+  <div class="footer-mid">
+    <div class="links">
+      <h2>友情链接</h2>
+      <ul>
+        <li><a href="http://c40liyong.houdunphp.com">李勇项目展示</a></li>
+        <li><a href="http://c40liyong.houdunphp.com/blog/index.php">李勇个人博客</a></li>
+        <li><a href="http://www.houdunwang.com">后盾网</a></li>
+        <li><a href="http://www.houdunphp.com">后盾框架</a></li>
+        <li><a href="http://bbs.houdunwang.com">后盾网论坛</a></li>
+      </ul>
+    </div>
+    <div class="visitors">
+      <h2>最新评论</h2>
+      <dl>
+        <dt><img src="{ly:$smarty.const._VIEW_}images/s8.jpg">
+        <dt>
+        <dd>liyong
+          <time>49分钟前</time>
+        </dd>
+        <dd>在 <a href="#" class="title">如果要学习web前端开发，需要学习什么？ </a>中评论：</dd>
+        <dd>文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</dd>
+      </dl>
+      <dl>
+        <dt><img src="{ly:$smarty.const._VIEW_}images/s7.jpg">
+        <dt>
+        <dd>yisa
+          <time>2小时前</time>
+        </dd>
+        <dd>在 <a href="#" class="title">芭蕾女孩的心事儿</a>中评论：</dd>
+        <dd>我手机里面也有这样一个号码存在</dd>
+      </dl>
+      <dl>
+        <dt><img src="{ly:$smarty.const._VIEW_}images/s6.jpg">
+        <dt>
+        <dd>小林博客
+          <time>8月7日</time>
+        </dd>
+        <dd>在 <a href="#">如果个人博客网站再没有价值，你还会坚持吗？ </a>中评论：</dd>
+        <dd>博客色彩丰富，很是好看</dd>
+      </dl>
+    </div>
+    <section class="flickr">
+      <h2>摄影作品</h2>
+      <ul>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/01.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/02.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/03.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/04.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/05.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/06.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/07.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/08.jpg"></a></li>
+        <li><a href="#"><img src="{ly:$smarty.const._VIEW_}images/09.jpg"></a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright 2013 Design by <a href="">liyong</a></p>
+  </div>
+</footer>
+<!-- jQuery仿腾讯回顶部和建议 代码开始 -->
+<div id="tbox"> <a id="togbook" href="/e/tool/gbook/?bid=1"></a> <a id="gotop" href="javascript:void(0)"></a> </div>
+<!-- 代码结束 -->
+</body>
+</html>

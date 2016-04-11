@@ -1,0 +1,13 @@
+<header>
+  <nav id="nav">
+    <ul>
+      <li><a href="{ly:$smarty.const._WEB_}" style="font-weight:700;font-size:20px;">网站首页</a></li>
+      {ly:section loop=$category name=c}
+      <li><a href="?m=Index&c=Index&a=showBlog&cid={ly:$category[c].cid}"  title="{ly:$category[c].catname}" style="font-weight:700;font-size:20px;">
+        {ly:$category[c].catname}
+      </a></li>
+      {ly:/section}
+    </ul>
+    <script src="{ly:$smarty.const.MODEL_PATH}js/silder.js"></script><!--获取当前页导航 高亮显示标题--> 
+  </nav>
+</header>

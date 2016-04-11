@@ -1,0 +1,205 @@
+@import url("scroll.css");
+body { margin: 0; padding: 0; font: 12px/1.5 Microsoft YaHei,Î¢ÈíÑÅºÚ,tahoma,arial,ËÎÌå; background: #fff; color: #000333; }
+div, form, ul, li, ol, p, h1, h2, h3, h4, h5, h6, img, dl, dt, dd, table, tr, td { margin: 0; padding: 0; }
+ul, li { list-style-type: none; }
+input, select { font: 12px/1.5 Microsoft YaHei,Î¢ÈíÑÅºÚ,tahoma,arial,ËÎÌå; line-height: 16px; }
+img { border: 0; }
+
+.osTopLayout{
+	width: 100%;
+	height: 77px;
+	line-height: 77px;
+	background: url(../images/ul_bg.png) repeat-x;
+	color: #ffffff;
+}
+.osTopLayout h2{
+	margin-left: 20px;
+}
+.osNavLayout{
+	display:block;
+	position:absolute;
+	width: 100%;
+	background: #1484ce;
+}
+#osTopNavMenu { display:block; }
+#osTopNavMenu .jquery_out {float:left;line-height:32px;display:block; border-right:1px solid #fff; text-align:center; color:#fff;font:18px/32px "微软雅黑"; background:#062723 url(../images/slide-panel_03.png) 0 0 repeat-x;}
+#osTopNavMenu .jquery_out .smile {padding-left:1em;}
+#osTopNavMenu .jquery_inner {margin-left:16px;}
+#osTopNavMenu .jquery {margin-right:1px;padding:0 2em;}
+#osTopNavMenu .mainlevel {background:#1484ce; float:left; border-right:1px solid #fff; width:108px;/*IE6 only*/}
+#osTopNavMenu .mainlevel a {color:#ffffff; text-decoration:none; line-height:32px; display:block; padding:0 10px; width:100px;}
+#osTopNavMenu .mainlevel a:hover {color:#fcf410; text-decoration:none;}
+#osTopNavMenu .mainlevel ul {display:none; position:absolute;}
+#osTopNavMenu .mainlevel li {border-top:1px solid #fff; background:#1484ce; width:108px;/*IE6 only*/}
+
+.osCenterContainer{
+	width: 100%;
+	/*height: 700px;*/
+	margin-top: 32px;
+	overflow: hidden;
+	/*background-color: #cccccc;*/
+}
+
+.osShortcutMenu{
+	float: left;
+	width: 200px;
+	background-color: #eff2f4;
+	margin: 10px 0 0 10px;
+}
+
+.osShortcutMenu table{
+	width: 100%;
+	border: 0;
+	border-collapse: 0;
+	border-spacing: 0;
+}
+
+.osShortcutMenu table td{
+	height: 35px;
+	border-bottom: #dddddd 1px solid;
+}
+
+.osShortcutMenu table .disp{
+	float: left;
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	background: url(../images/shortcut_menu.png) no-repeat;
+	padding-left: 30px;
+	color: #666666;
+}
+
+.osShortcutMenu table .user, .level, .currency
+{
+	margin-left: 20px;
+	font-size: 14px;
+	color: #666666;
+}
+
+.osShortcutMenu table td a:link{
+	text-decoration: none;
+	font-size: 14px;
+	color: #666666;
+	margin-left: 20px;
+}
+
+.osShortcutMenu table td a:hover{
+	text-decoration: underline;
+}
+
+.osShortcutMenu table td .addCustomer{
+	background: url(../images/add_customer.png) no-repeat;
+	padding-left: 30px;
+}
+
+.osShortcutMenu table td .bounsExchange{
+	background: url(../images/exchange.png) no-repeat;
+	padding-left: 30px;
+}
+
+.osShortcutMenu table td .inBox{
+	background: url(../images/inbox.png) no-repeat;
+	padding-left: 30px;
+}
+
+.osShortcutMenu table td .lookNotice{
+	background: url(../images/notice.png) no-repeat;
+	padding-left: 30px;
+}
+
+.osShortcutMenu table td .sendNotice{
+	background: url(../images/mailgo.png) no-repeat;
+	padding-left: 30px;
+}
+
+.osBusinessContent{
+	float: left;
+	width: 800px;
+	margin-left: 10px;
+}
+
+.osFooter{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 77px;
+	line-height: 77px;
+	background: url(../images/ul_bg.png) repeat-x;
+	color: #ffffff;
+	text-align: center;
+}
+
+.bn-clear{
+	width: 100%;
+	height: 10px;
+}
+
+.urlNavInfo{
+	margin-left: 20px;
+}
+/*
+.urlNavInfo a:link{
+	text-decoration: none;
+}
+.urlNavInfo a:hover{
+	text-decoration: underline;
+}*/
+
+.btn-submit 
+{
+	display: block;
+	text-decoration: none;
+	float: left;
+	width: 58px;
+	height: 27px;
+	border: 0;
+	background: url(../images/pub_btn.png);
+	background-position: 0 0;
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+	margin-right: 20px;
+}
+.btn-submit:hover
+{
+	background-position: 0 -27px;
+}
+
+.osOverviewHeader
+{
+	width: 100%; 
+	border: 0; 
+	border-collapse: 0; 
+	border-spacing: 0;
+	background: #F0F0F0 url(../img/head_bgx.gif) repeat-x 0 -80px;  
+	border:#ccc solid;
+	border-width: 1px 0 1px 1px;
+}
+.osOverviewHeader tr td{ height: 28px; border: 0; margin: 0; padding: 0; border-right:#ccc 1px solid; text-align: center; }
+.osOverviewList
+{
+	width: 100%; 
+	border: 0; 
+	border-collapse: 0; 
+	border-spacing: 0;
+	border:#ccc solid;
+	border-width: 0 0 0 1px;
+}
+.osOverviewList tr td{ height: 25px; border: 0; margin: 0; padding: 0; border:#ccc solid; border-width: 0 1px 1px 0; }
+
+.dirTitle{ width: 100%; height: 30px; line-height: 30px; background-color: #f0f4f6; border-bottom: #fab74e 3px solid; margin-top: 10px; }
+.dirTitle span{ display: block; float: left; font-size: 14px; margin-left: 5px; }
+.dirTitle .text-info{ display: block; float: left; width: 16px; height: 16px; background: url(../images/text-icon.png) no-repeat; margin-top: 7px; }
+
+.osJoinForm{ width: 100%; border: 0; border-collapse: 0; border-spacing: 0; }
+.osJoinForm tr td{ height: 35px; }
+.osJoinSpaceLeft{ width: 80px; text-align: right; }
+.osJoinSpaceContent{ width: 220px; text-align: left; }
+.osJoinSpaceRight{ text-align: left; }
+.osJoinSpaceRight input{ margin-left: 3px; }
+.putxt{ width: 215px; height: 22px; border: #999999 1px solid; padding: 0 5px 0 5px;}
+.putslt{ width: 225px; height: 22px; }
+.os-tip{ color: #999999; margin-left: 3px; }
+.os-must{ font-size: 14px; color: Red; margin-left: 3px; }
+.inte { display: block; margin-right: 5px; }
+.inte input { padding: 0 3px 0 3px; }

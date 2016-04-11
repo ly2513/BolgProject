@@ -1,0 +1,54 @@
+﻿body 
+{	
+	
+	background:url("../images/bg_01.gif");
+	background-position: 100% 100%;
+    font-size: 14px;
+}
+.login-panel {
+	position: absolute;
+	z-index: 5;
+	left: 50%;
+	top: 50%;
+	width: 683px;
+	height: 481px;
+	background: url(../images/logo_fbg.png) no-repeat;
+	margin-left: -342px;
+	margin-top: -255px;
+}
+.login-context{
+	width: 100%;
+	border: 0;
+	border-collapse: 0; 
+	border-spacing: 0;
+	margin-top: 140px;
+}
+.login-context table{
+	width: 100%;
+	border: 0;
+	border-collapse: 0; 
+	border-spacing: 0;
+	color: #ffffff;
+}
+.login-context .txt {
+	width: 150px;
+	height: 22px;
+	border: #666666 1px solid;
+	padding: 0 5px 0 5px;
+}
+.btn-login{
+	width: 55px;
+	height: 30px;
+	border: 0;
+	background: url(../images/btn_login.png) no-repeat;
+	padding-bottom: 5px;
+	color: #333333;
+	cursor: pointer;
+	margin-top: 10px;
+}
+.verify-input{
+	width: 80px;
+	height: 22px;
+	border: #666666 1px solid;
+	padding: 0 5px 0 5px;
+}
