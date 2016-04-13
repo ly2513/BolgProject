@@ -1,2 +1,10 @@
 data/
-Blog/**/view/**/Compile
+Blog/Index/Model
+Blog/Admin/View/Blog/Compile
+Blog/Admin/View/Category/Compile
+Blog/Admin/View/Index/Compile
+Blog/Admin/View/Login/Compile
+Blog/Admin/View/Public/Compile
+Blog/Admin/View/User/Compile
+Blog/Index/View/Index/Compile
+Blog/Index/View/Public/Compile
